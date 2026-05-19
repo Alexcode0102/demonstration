@@ -4,149 +4,351 @@
   padding: 0;
 }
 
+html {
+  scroll-behavior: smooth;
+}
+
 body {
   font-family: Arial, sans-serif;
   background: #07070a;
   color: #f4f4f5;
-  line-height: 1.6;
-  padding: 24px;
 }
 
-.container {
-  max-width: 1100px;
-  margin: auto;
-}
-
-.hero, .card {
+.sidebar {
+  position: fixed;
+  left: 20px;
+  top: 20px;
+  bottom: 20px;
+  width: 210px;
+  background: rgba(17, 17, 19, 0.85);
   border: 1px solid #27272a;
-  border-radius: 26px;
-  padding: 30px;
-  margin-bottom: 24px;
-  box-shadow: 0 12px 40px rgba(0,0,0,.25);
+  border-radius: 24px;
+  padding: 20px;
+  backdrop-filter: blur(16px);
+}
+
+.logo {
+  width: 44px;
+  height: 44px;
+  border-radius: 14px;
+  display: grid;
+  place-items: center;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  font-weight: 900;
+  margin-bottom: 28px;
+}
+
+nav {
+  display: grid;
+  gap: 12px;
+}
+
+nav a {
+  color: #a1a1aa;
+  text-decoration: none;
+  padding: 12px;
+  border-radius: 14px;
+  transition: 0.2s;
+}
+
+nav a:hover {
+  color: white;
+  background: rgba(255,255,255,0.06);
+}
+
+.app {
+  max-width: 1120px;
+  margin-left: 260px;
+  padding: 24px 24px 60px;
 }
 
 .hero {
-  background: linear-gradient(135deg, #111827, #1e1b4b, #020617);
-  padding: 44px;
+  min-height: 88vh;
+  border: 1px solid #27272a;
+  border-radius: 34px;
+  padding: 52px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  background:
+    radial-gradient(circle at top right, rgba(124,58,237,.35), transparent 35%),
+    linear-gradient(135deg, #111827, #020617);
 }
 
-.badge {
-  display: inline-block;
-  background: rgba(139, 92, 246, 0.18);
+.tag {
+  width: fit-content;
+  background: rgba(139,92,246,.18);
   color: #c4b5fd;
+  border: 1px solid rgba(196,181,253,.25);
   padding: 8px 14px;
   border-radius: 999px;
-  margin-bottom: 18px;
+  margin-bottom: 22px;
+  font-size: 14px;
 }
 
 h1 {
-  font-size: clamp(36px, 7vw, 72px);
-  line-height: 1;
-  margin-bottom: 18px;
+  font-size: clamp(42px, 7vw, 82px);
+  line-height: 0.95;
+  max-width: 900px;
+  margin-bottom: 24px;
 }
 
 h2 {
-  margin-bottom: 14px;
+  font-size: clamp(30px, 4vw, 48px);
+}
+
+h3 {
+  font-size: 22px;
+  margin-bottom: 10px;
 }
 
 p {
   color: #cbd5e1;
-  margin-bottom: 14px;
+  line-height: 1.7;
+  max-width: 760px;
 }
 
-strong {
+.hero p {
+  font-size: 18px;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 14px;
+  margin-top: 30px;
+  flex-wrap: wrap;
+}
+
+.btn,
+button {
+  border: none;
+  cursor: pointer;
+  text-decoration: none;
   color: white;
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-weight: 800;
+  transition: 0.2s;
 }
 
-.grid {
+.btn:hover,
+button:hover {
+  transform: translateY(-2px);
+}
+
+.ghost {
+  background: rgba(255,255,255,0.06);
+  border: 1px solid #27272a;
+}
+
+.section {
+  padding-top: 80px;
+}
+
+.section-title {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 26px;
+}
+
+.section-title span {
+  width: 46px;
+  height: 46px;
+  border-radius: 50%;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 20px;
+  place-items: center;
+  background: #8b5cf6;
+  font-weight: 900;
 }
 
-.card {
+.vision-card,
+.routine-card,
+.final,
+.mission-card,
+.tool-card,
+.step,
+.mini-card {
   background: #111113;
+  border: 1px solid #27272a;
+  border-radius: 26px;
+  padding: 28px;
+  box-shadow: 0 18px 60px rgba(0,0,0,.25);
 }
 
-.purple {
+.vision-card {
   background: linear-gradient(160deg, #18112f, #09090b);
   border-color: #4c1d95;
 }
 
-.blue {
-  background: linear-gradient(160deg, #0f172a, #09090b);
-  border-color: #1d4ed8;
+.vision-card h3 {
+  font-size: 30px;
+}
+
+.split {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 18px;
+  margin-top: 18px;
+}
+
+.wrong {
+  border-color: rgba(239,68,68,.4);
+}
+
+.right {
+  border-color: rgba(34,197,94,.4);
+}
+
+.missions,
+.tools-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+}
+
+.icon {
+  font-size: 36px;
+  margin-bottom: 14px;
+}
+
+.mission-card button,
+.tool-card button {
+  margin-top: 18px;
+}
+
+.details {
+  display: none;
+  margin-top: 18px;
+}
+
+.details.open {
+  display: block;
 }
 
 ul {
+  list-style: none;
   display: grid;
   gap: 10px;
-  list-style: none;
 }
 
-li, label {
-  display: block;
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.08);
+li,
+label {
+  background: rgba(255,255,255,.045);
+  border: 1px solid rgba(255,255,255,.07);
   padding: 12px 14px;
   border-radius: 14px;
-  margin-bottom: 10px;
+  color: #e5e7eb;
+}
+
+.tasks {
+  display: grid;
+  gap: 10px;
+  margin-top: 24px;
 }
 
 input {
   margin-right: 10px;
 }
 
-button {
-  background: linear-gradient(135deg, #7c3aed, #2563eb);
-  color: white;
-  border: none;
-  padding: 14px 20px;
+.progress {
+  height: 12px;
   border-radius: 999px;
-  font-weight: 700;
-  cursor: pointer;
-  margin-top: 10px;
+  background: #27272a;
+  overflow: hidden;
+  margin-top: 26px;
 }
 
-button:hover {
-  transform: scale(1.03);
-}
-
-.quote {
-  font-size: 24px;
-  font-weight: 800;
+#progressBar {
+  height: 100%;
+  width: 0%;
   background: linear-gradient(135deg, #7c3aed, #2563eb);
-  padding: 22px;
-  border-radius: 20px;
-  margin-top: 16px;
+  transition: 0.3s;
 }
 
-.small {
-  font-size: 20px;
-}
-
-.hidden {
-  display: none;
-}
-
-#progress {
-  font-weight: bold;
+#progressText {
+  margin-top: 10px;
   color: #c4b5fd;
+  font-weight: 800;
+}
+
+.result {
   margin-top: 18px;
+  padding: 18px;
+  border-radius: 18px;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
+  color: white;
+  font-weight: 800;
+  min-height: 72px;
 }
 
-footer {
+.clean-list li::before {
+  content: "✓ ";
+  color: #22c55e;
+  font-weight: 900;
+}
+
+.timeline {
+  display: grid;
+  gap: 18px;
+}
+
+.step {
+  position: relative;
+  padding-left: 34px;
+}
+
+.step span {
+  color: #a78bfa;
+  font-weight: 900;
+}
+
+.final {
+  margin-top: 80px;
+  background: linear-gradient(135deg, #111827, #1e1b4b);
   text-align: center;
-  color: #71717a;
-  padding: 30px 0;
 }
 
-@media (max-width: 600px) {
-  body {
+.final p {
+  margin: 14px auto 0;
+}
+
+@media (max-width: 900px) {
+  .sidebar {
+    position: static;
+    width: auto;
+    margin: 14px;
+  }
+
+  nav {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .app {
+    margin-left: 0;
     padding: 14px;
   }
 
-  .hero, .card {
-    padding: 22px;
+  .hero {
+    min-height: auto;
+    padding: 30px;
+  }
+
+  .missions,
+  .tools-grid,
+  .split {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 520px) {
+  nav {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  h1 {
+    font-size: 42px;
   }
 }
