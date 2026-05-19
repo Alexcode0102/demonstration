@@ -270,6 +270,22 @@ button:hover {
   margin-bottom: 12px;
 }
 
+.role-card ul,
+.vision-card ul,
+.vision-card ol {
+  margin-top: 10px;
+  display: grid;
+  gap: 8px;
+}
+
+.role-card ul {
+  padding-left: 18px;
+}
+
+.role-grid {
+  margin-top: 12px;
+}
+
 .role-card p {
   color: #dbeafe;
   line-height: 1.8;
