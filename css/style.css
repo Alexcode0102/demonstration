@@ -17,12 +17,17 @@ body {
   margin: auto;
 }
 
+.hero, .card {
+  border: 1px solid #27272a;
+  border-radius: 26px;
+  padding: 30px;
+  margin-bottom: 24px;
+  box-shadow: 0 12px 40px rgba(0,0,0,.25);
+}
+
 .hero {
   background: linear-gradient(135deg, #111827, #1e1b4b, #020617);
-  border: 1px solid #27272a;
-  border-radius: 28px;
-  padding: 42px;
-  margin-bottom: 28px;
+  padding: 44px;
 }
 
 .badge {
@@ -41,34 +46,26 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 16px;
-  font-size: 26px;
+  margin-bottom: 14px;
 }
 
 p {
   color: #cbd5e1;
-  margin-bottom: 12px;
+  margin-bottom: 14px;
+}
+
+strong {
+  color: white;
 }
 
 .grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
   gap: 20px;
-  margin-bottom: 28px;
 }
 
 .card {
   background: #111113;
-  border: 1px solid #27272a;
-  border-radius: 24px;
-  padding: 26px;
-  margin-bottom: 24px;
-  box-shadow: 0 12px 40px rgba(0,0,0,.25);
-}
-
-.blue {
-  background: linear-gradient(160deg, #0f172a, #09090b);
-  border-color: #1d4ed8;
 }
 
 .purple {
@@ -76,40 +73,66 @@ p {
   border-color: #4c1d95;
 }
 
-ul, ol {
-  display: grid;
-  gap: 10px;
-  padding-left: 0;
-  list-style-position: inside;
+.blue {
+  background: linear-gradient(160deg, #0f172a, #09090b);
+  border-color: #1d4ed8;
 }
 
-li {
-  background: rgba(255,255,255,.04);
-  border: 1px solid rgba(255,255,255,.06);
+ul {
+  display: grid;
+  gap: 10px;
+  list-style: none;
+}
+
+li, label {
+  display: block;
+  background: rgba(255,255,255,.05);
+  border: 1px solid rgba(255,255,255,.08);
   padding: 12px 14px;
   border-radius: 14px;
+  margin-bottom: 10px;
+}
+
+input {
+  margin-right: 10px;
+}
+
+button {
+  background: linear-gradient(135deg, #7c3aed, #2563eb);
+  color: white;
+  border: none;
+  padding: 14px 20px;
+  border-radius: 999px;
+  font-weight: 700;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+button:hover {
+  transform: scale(1.03);
 }
 
 .quote {
   font-size: 24px;
   font-weight: 800;
   background: linear-gradient(135deg, #7c3aed, #2563eb);
-  padding: 24px;
+  padding: 22px;
   border-radius: 20px;
   margin-top: 16px;
 }
 
-.examples {
-  display: grid;
-  gap: 12px;
-  margin-top: 16px;
+.small {
+  font-size: 20px;
 }
 
-.examples span {
-  background: rgba(255,255,255,.05);
-  border: 1px solid rgba(255,255,255,.08);
-  padding: 14px;
-  border-radius: 14px;
+.hidden {
+  display: none;
+}
+
+#progress {
+  font-weight: bold;
+  color: #c4b5fd;
+  margin-top: 18px;
 }
 
 footer {
@@ -123,8 +146,7 @@ footer {
     padding: 14px;
   }
 
-  .hero,
-  .card {
+  .hero, .card {
     padding: 22px;
   }
 }

@@ -3,115 +3,109 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Dashboard da Marca</title>
+  <title>Sua Missão na Marca</title>
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
   <main class="container">
     <section class="hero">
-      <span class="badge">🚀 Plano da Marca</span>
-      <h1>Vamos construir algo grande.</h1>
+      <span class="badge">📱 Sua missão oficial</span>
+      <h1>Você vai ser a parte criativa da marca.</h1>
       <p>
-        Uma marca premium, moderna e memorável baseada em conteúdo,
-        estética, emoção e retenção.
+        Enquanto eu cuido da estrutura, loja e estratégia, você vai cuidar daquilo que mais gera crescimento hoje:
+        <strong>atenção, vídeos, criatividade e energia.</strong>
       </p>
+      <button id="startBtn">Começar minha missão 🚀</button>
     </section>
 
-    <section class="grid">
-      <div class="card blue">
-        <h2>🖥️ Minha função</h2>
-        <ul>
-          <li>Construir a loja na Shopify</li>
-          <li>Organizar branding e identidade visual</li>
-          <li>Pesquisar produtos e fornecedores</li>
-          <li>Configurar pagamentos e checkout</li>
-          <li>Cuidar de anúncios e analytics</li>
-        </ul>
-      </div>
-
-      <div class="card purple">
-        <h2>📱 Sua função</h2>
-        <ul>
-          <li>Pesquisar vídeos virais</li>
-          <li>Editar vídeos no CapCut</li>
-          <li>Criar ideias de conteúdo</li>
-          <li>Ajudar na estética da marca</li>
-          <li>Postar TikTok, Reels e Shorts</li>
-        </ul>
-      </div>
-    </section>
-
-    <section class="card">
-      <h2>🎯 Sua missão principal</h2>
-      <p>Sua função não é só editar vídeo. Sua função é fazer as pessoas pararem de rolar.</p>
+    <section id="mission" class="card hidden">
+      <h2>🎯 Sua função principal</h2>
+      <p>
+        Sua missão não é só editar vídeos. Sua missão é fazer as pessoas pararem de rolar,
+        assistirem até o final e sentirem vontade de conhecer a marca.
+      </p>
       <div class="quote">Atenção primeiro. Venda depois.</div>
     </section>
 
     <section class="grid">
       <div class="card">
-        <h2>🔥 Pesquisar vídeos virais</h2>
+        <h2>🔥 1. Pesquisar vídeos virais</h2>
+        <p>Todo dia você vai buscar referências no TikTok, Reels e Shorts.</p>
         <ul>
-          <li>Entrar no TikTok todos os dias</li>
           <li>Salvar hooks fortes</li>
-          <li>Analisar edições que prendem atenção</li>
-          <li>Guardar sons, trends e ideias</li>
+          <li>Analisar vídeos que prendem atenção</li>
+          <li>Guardar sons, trends e estilos</li>
+          <li>Entender por que o vídeo viralizou</li>
         </ul>
       </div>
 
       <div class="card">
-        <h2>🎬 Editar vídeos</h2>
+        <h2>🎬 2. Editar vídeos</h2>
+        <p>Você vai usar o CapCut para criar vídeos rápidos, fortes e com energia.</p>
         <ul>
-          <li>Usar cortes rápidos</li>
-          <li>Adicionar zoom, blur e transições</li>
-          <li>Usar sound design</li>
-          <li>Focar nos primeiros 1–3 segundos</li>
+          <li>Cortes rápidos</li>
+          <li>Zoom, blur e transições</li>
+          <li>Sound design</li>
+          <li>Primeiros 1–3 segundos impactantes</li>
         </ul>
       </div>
 
       <div class="card">
-        <h2>🧠 Personalidade</h2>
+        <h2>🧠 3. Criar a personalidade</h2>
+        <p>A marca precisa parecer viva, divertida e natural.</p>
         <ul>
-          <li>Tom divertido e espontâneo</li>
           <li>Linguagem de internet</li>
-          <li>Energia de amigo mostrando algo insano</li>
-          <li>Mais entretenimento, menos propaganda</li>
+          <li>Tom de amigo mostrando algo insano</li>
+          <li>Energia, humor e surpresa</li>
+          <li>Nada de anúncio chato ou corporativo</li>
         </ul>
       </div>
 
       <div class="card">
-        <h2>🎨 Visual</h2>
+        <h2>🎨 4. Ajudar no visual</h2>
+        <p>Como você desenha bem, sua visão visual vai ser uma vantagem.</p>
         <ul>
-          <li>Criar thumbnails</li>
-          <li>Fazer ideias de banners</li>
-          <li>Desenhar conceitos</li>
-          <li>Ajudar em overlays e estética</li>
+          <li>Thumbnails</li>
+          <li>Ideias de banners</li>
+          <li>Overlays</li>
+          <li>Conceitos visuais da marca</li>
         </ul>
       </div>
     </section>
 
     <section class="card purple">
-      <h2>🗓️ Rotina diária dele</h2>
-      <ol>
-        <li>Pesquisar 10 vídeos virais no nicho</li>
-        <li>Salvar 3 hooks bons</li>
-        <li>Criar 2 ideias de vídeo</li>
-        <li>Editar pelo menos 1 vídeo</li>
-        <li>Postar ou deixar pronto para postar</li>
-      </ol>
+      <h2>🗓️ Sua rotina diária</h2>
+
+      <label><input type="checkbox"> Pesquisar 10 vídeos virais</label>
+      <label><input type="checkbox"> Salvar 3 hooks bons</label>
+      <label><input type="checkbox"> Criar 2 ideias de vídeo</label>
+      <label><input type="checkbox"> Editar pelo menos 1 vídeo</label>
+      <label><input type="checkbox"> Postar ou deixar pronto para postar</label>
+
+      <p id="progress">Progresso: 0%</p>
     </section>
 
     <section class="card">
-      <h2>💬 Estilo de linguagem</h2>
-      <p>Natural, rápido, divertido e com energia.</p>
-      <div class="examples">
-        <span>“BROOO imagine gaming with this at 2AM 😭”</span>
-        <span>“nahhh this setup is insane 💀”</span>
-        <span>“yo this doesn’t even look real 💀”</span>
-      </div>
+      <h2>💬 Estilo que você deve usar</h2>
+      <p>Clique para gerar frases no estilo da marca:</p>
+      <button id="phraseBtn">Gerar frase 🔥</button>
+      <div id="phraseBox" class="quote small">Clique no botão acima.</div>
+    </section>
+
+    <section class="card blue">
+      <h2>🏆 O que eu espero de você</h2>
+      <p>
+        Quero que você seja criativo, constante e ousado. Não precisa acertar tudo no começo.
+        O importante é testar, melhorar e aprender rápido.
+      </p>
+      <p>
+        Se você dominar conteúdo, retenção e estética, você vira uma das partes mais importantes desse projeto.
+      </p>
     </section>
 
     <footer>
-      Feito para organizar nossa parceria e transformar ideia em execução.
+      Sua parte: atenção, criatividade, vídeos e energia.  
+      Minha parte: estrutura, loja, estratégia e crescimento.
     </footer>
   </main>
 
