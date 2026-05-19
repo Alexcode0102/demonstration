@@ -33,12 +33,22 @@ const checkboxes = document.querySelectorAll("input[type='checkbox']");
 const progressBar = document.getElementById("progressBar");
 const progressText = document.getElementById("progressText");
 
-checkboxes.forEach((checkbox) => {
-  checkbox.addEventListener("change", updateProgress);
-});
+if (checkboxes && checkboxes.length > 0 && progressBar && progressText) {
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", updateProgress);
+  });
+  // inicializa barra
+  updateProgress();
+} else if (checkboxes && checkboxes.length > 0) {
+  // evita erros se progressBar/progressText não existirem
+  checkboxes.forEach((checkbox) => {
+    checkbox.addEventListener("change", () => {});
+  });
+}
 
 function updateProgress() {
-  const total = checkboxes.length;
+  if (!progressBar || !progressText) return;
+  const total = checkboxes.length || 1;
   const checked = document.querySelectorAll("input[type='checkbox']:checked").length;
   const percent = Math.round((checked / total) * 100);
 
@@ -78,12 +88,17 @@ const hookResult = document.getElementById("hookResult");
 const ideaBtn = document.getElementById("ideaBtn");
 const ideaResult = document.getElementById("ideaResult");
 
-hookBtn.addEventListener("click", () => {
-  const random = Math.floor(Math.random() * hooks.length);
-  hookResult.textContent = hooks[random];
-});
+if (hookBtn && hookResult) {
+  hookBtn.addEventListener("click", () => {
+    const random = Math.floor(Math.random() * hooks.length);
+    hookResult.textContent = hooks[random];
+  });
+}
 
-ideaBtn.addEventListener("click", () => {
-  const random = Math.floor(Math.random() * ideas.length);
-  ideaResult.textContent = ideas[random];
-});
+if (ideaBtn && ideaResult) {
+  ideaBtn.addEventListener("click", () => {
+    const random = Math.floor(Math.random() * ideas.length);
+    ideaResult.textContent = ideas[random];
+  });
+}
+ 
