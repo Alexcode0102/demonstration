@@ -1,4 +1,6 @@
 const toggles = document.querySelectorAll(".toggle");
+const menuToggle = document.querySelector(".menu-toggle");
+const mobileMenu = document.getElementById("mobile-menu");
 
 toggles.forEach((button) => {
   button.addEventListener("click", () => {
@@ -10,6 +12,22 @@ toggles.forEach((button) => {
       : "Ver detalhes";
   });
 });
+
+if (menuToggle && mobileMenu) {
+  menuToggle.addEventListener("click", () => {
+    const isOpen = mobileMenu.classList.toggle("open");
+    menuToggle.setAttribute("aria-expanded", isOpen);
+    mobileMenu.setAttribute("aria-hidden", !isOpen);
+  });
+
+  mobileMenu.querySelectorAll("a").forEach((link) => {
+    link.addEventListener("click", () => {
+      mobileMenu.classList.remove("open");
+      menuToggle.setAttribute("aria-expanded", "false");
+      mobileMenu.setAttribute("aria-hidden", "true");
+    });
+  });
+}
 
 const checkboxes = document.querySelectorAll("input[type='checkbox']");
 const progressBar = document.getElementById("progressBar");

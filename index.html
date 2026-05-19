@@ -7,6 +7,11 @@
   <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
+  <header class="mobile-header">
+    <div class="logo">A</div>
+    <button class="menu-toggle" aria-controls="mobile-menu" aria-expanded="false">☰ Menu</button>
+  </header>
+
   <aside class="sidebar">
     <div class="logo">A</div>
     <nav>
@@ -18,6 +23,17 @@
       <a href="#evolucao">Evolução</a>
     </nav>
   </aside>
+
+  <div class="mobile-menu" id="mobile-menu" aria-hidden="true">
+    <nav>
+      <a href="#inicio">Início</a>
+      <a href="#visao">Visão</a>
+      <a href="#missoes">Missões</a>
+      <a href="#rotina">Rotina</a>
+      <a href="#conteudo">Conteúdo</a>
+      <a href="#evolucao">Evolução</a>
+    </nav>
+  </div>
 
   <main class="app">
     <section id="inicio" class="hero">
